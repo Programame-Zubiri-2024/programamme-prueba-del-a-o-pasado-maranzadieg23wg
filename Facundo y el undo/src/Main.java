@@ -21,19 +21,6 @@ public class Main {
 
             ArrayList<String> era = new ArrayList<>();
 
-            /*for (int e =0; e<lista.length;e++){
-                //era.add(lista[e]);
-                //System.out.println("e: "+e);
-                if (e ==0 && (lista[e].equals("<") || lista[e].equals(">"))){
-
-                }else if (e == lista.length-1 && (lista[e].equals(">"))){
-                    era.add(lista[e]);
-                }else if (lista[e].equals("<")){
-                    era.add(lista[e-1]);
-                }else if (lista[e].equals(">")){
-                    era.add(lista[e-1]);
-                }
-            }*/
 
             era.addAll(Arrays.asList(lista));
             //System.out.println(era.size());
@@ -44,17 +31,19 @@ public class Main {
 
                     if (e ==0 && (era.get(e).equals("<") || era.get(e).equals(">"))){
                         era.remove(0);
-                        //era.add(0, "");
+                        //e=0;
                     }else if (e == era.size()-1 && (era.get(e).equals(">"))){
 
                         //era.remove(era.size()-1);
                         era.remove(e);
                         era.add(era.get(e-1));
+                        //e=0;
 
                     }else if (era.get(e).equals("<")){
 
                         era.remove(e);
                         era.remove(e-1);
+                        //e=0;
 
 
 
@@ -69,6 +58,7 @@ public class Main {
                                 t = -2;
                             }
                         }
+                        //e=0;
 
                     }
                     erakutsi(era);
